@@ -3,12 +3,22 @@ body {
   background: #f4f4f4;
   font-size: 17px;
   line-height: 1.6;
-  display: flex;
+  /* display: flex; */
   height: 100vh;
   align-items: center;
   justify-content: center;
   background-image: url(../img/clouds.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   text-transform: uppercase;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 150px;
+  color: rgb(48, 30, 150);
+  font-size: 50px;
 }
 
 .days {
@@ -17,6 +27,8 @@ body {
   left: 50%;
   width: 80%;
   transform: translateX(-50%) translateY(-50%);
+  align-items: center;
+  opacity: 0.8;
 }
 
 ul {
