@@ -1,52 +1,52 @@
-'use strict';
+"use strict";
 const weatherData = {
   tempUnit: "c",
   windSpeedUnit: "m/s",
   week: [
     {
-      day: "Mon",
+      day: "Monday",
       temp: 22,
       windDirection: "north-east",
       windSpeed: 10,
       type: "sunny"
     },
     {
-      day: "Tue",
+      day: "Tuesday",
       temp: 14,
       windDirection: "north-west",
       windSpeed: 14,
       type: "rainy"
     },
     {
-      day: "Wed",
+      day: "Wednesday",
       temp: 17,
       windDirection: "south-east",
       windSpeed: 20,
       type: "cloudy"
     },
     {
-      day: "Thu",
+      day: "Thursday",
       temp: 17,
       windDirection: "south-east",
       windSpeed: 20,
       type: "sunny"
     },
     {
-      day: "Fri",
+      day: "Friday",
       temp: 17,
       windDirection: "south-east",
       windSpeed: 20,
       type: "cloudy"
     },
     {
-      day: "Sat",
+      day: "Saturday",
       temp: 17,
       windDirection: "north-west",
       windSpeed: 20,
       type: "cloudy"
     },
     {
-      day: "Sun",
+      day: "Sunday",
       temp: 17,
       windDirection: "south-east",
       windSpeed: 20,
@@ -69,10 +69,10 @@ weatherData.week.forEach(day => {
   eachDay.classList.add(day.day);
 
   eachDay.addEventListener("click", function() {
-  	windArrow(day.windDirection);
-  	openModal(day.day, day.type, day.temp, day.windSpeed, day.windDirection);
+    windArrow(day.windDirection);
+    openModal(day.day, day.type, day.temp, day.windSpeed, day.windDirection);
   });
-  
+
   eachDay.innerHTML = `<span class='day'>${day.day}</span><span class='temp'>${
     day.temp
   }</span>`;
@@ -88,7 +88,7 @@ function windArrow(direction) {
 }
 
 function openModal(day, type, temp, windSpeed, windDirection) {
- 	dayInWeek.innerText = day;
+  dayInWeek.innerText = day;
   wetherIcon.innerText = type;
   temperature.innerText = temp;
   windSpeeds.innerText = windSpeed;
@@ -97,7 +97,7 @@ function openModal(day, type, temp, windSpeed, windDirection) {
 }
 
 window.onclick = function(event) {
-    if (event.target == close) {
-        modal.style.display = "none";
-    }
-}
+  if (event.target == close) {
+    modal.style.display = "none";
+  }
+};
